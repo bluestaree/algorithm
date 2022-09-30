@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode._2022_9;
 
 import org.junit.Test;
 
