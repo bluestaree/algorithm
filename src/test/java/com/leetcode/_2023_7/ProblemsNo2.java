@@ -61,42 +61,6 @@ public class ProblemsNo2 {
         return result.next;
     }
 
-    public ListNode addTwoNumbers1(ListNode l1, ListNode l2) {
-        boolean flag = false;
-        int firstNum = l1.val + l2.val;
-        if(firstNum >= 10) {
-            flag = true;
-        }
-        ListNode result = new ListNode(firstNum % 10);
-        l1 = l1.next;
-        l2 = l2.next;
-        ListNode pre = result;
-        while(true) {
-            boolean a = l1 == null;
-            boolean b = l2 == null;
-            if(a && b) {
-                break;
-            }
-            int i1 = a ? 0 : l1.val;
-            int i2 = b ? 0 : l2.val;
-            int res = flag ? i1 + i2 + 1 : i1 + i2;
-            if(res >= 10) {
-                flag = true;
-            } else {
-                flag = false;
-            }
-            pre.next = new ListNode(res % 10);
-            pre = pre.next;
-            l1 = a ? null : l1.next;
-            l2 = b ? null : l2.next;
-        }
-
-        if(flag) {
-            pre.next = new ListNode(1);
-        }
-        return result;
-    }
-
     public class ListNode {
         int val;
         ListNode next;
