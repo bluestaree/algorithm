@@ -1,6 +1,5 @@
 package com.leetcode._2022_9;
 
-import com.itheima.week1.array_list.list.ArrayList;
 import org.junit.Test;
 
 import java.util.Arrays;
