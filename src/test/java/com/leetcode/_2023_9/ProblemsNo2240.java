@@ -1,8 +1,5 @@
 package com.leetcode._2023_9;
 
-import cn.hutool.core.lang.PatternPool;
-import cn.hutool.core.lang.Validator;
-import cn.hutool.core.util.PhoneUtil;
 import org.junit.Test;
 
 import java.util.HashSet;
