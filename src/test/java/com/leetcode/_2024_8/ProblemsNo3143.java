@@ -25,24 +25,22 @@ public class ProblemsNo3143 {
     public int maxPointsInsideSquare(int[][] points, String s) {
         int n = s.length();
         int[] a = new int[26];
-        int[] nums = new int[n];
-        Arrays.fill(a, -1);
-        int max = Integer.MAX_VALUE;
+        Arrays.fill(a, Integer.MAX_VALUE);
+        int min = Integer.MAX_VALUE;
         for (int i = 0; i < n; i++) {
             int cur = Math.max(Math.abs(points[i][0]) , Math.abs(points[i][1]));
-            nums[i] = cur;
             int index = s.charAt(i) - 'a';
-            if(a[index] == -1) {
+            if(cur < a[index]) {
+                min = Math.min(min, a[index]);
                 a[index] = cur;
             } else {
-                max =Math.min(max, Math.max(cur, a[index]));
-                a[index] = Math.min(cur, a[index]);
+                min = Math.min(min, cur);
             }
         }
         int res = 0;
-        for (int num : nums) {
-            if(num < max) {
-              res++;
+        for (int num : a) {
+            if(num < min) {
+                res++;
             }
         }
         return res;
