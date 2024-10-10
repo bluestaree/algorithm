@@ -16,7 +16,7 @@ public class ProblemsNo1845 {
 
     @Test
     public void solution() {
-        SeatManager obj = new SeatManager(n);
+        SeatManager obj = new SeatManager(2);
         int param_1 = obj.reserve();
         obj.unreserve(3);
     }
