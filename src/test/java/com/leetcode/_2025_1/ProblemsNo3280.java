@@ -9,7 +9,7 @@ import java.util.Arrays;
  * 3280. 将日期转换为二进制表示
  *
  * @author DHW
- * @date 2022/1/1 11: 18
+ * @date 2025/1/1 11: 18
  * @Version 1.0
 */
 public class ProblemsNo3280 {
